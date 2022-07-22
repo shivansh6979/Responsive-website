@@ -1,0 +1,427 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color : blueviolet;
+    --secondary-color : #9400D3;
+    --dark-color :#33006F;
+    --light-color : #D3D3D3;
+    --footer-color : #4B0082;
+}
+
+body{
+   background-color: black;
+   min-height: 110vh;
+   line-height: 1.5;
+   font-weight: bold;
+   color: white;
+
+}
+
+.logo{
+    font-size: 36px;
+    padding: 10px;
+    margin-left: 70px;
+
+}
+
+.list{
+    display: flex;
+    margin-right: 50px;
+    
+}
+
+li a{
+    text-decoration: none;
+    font-size: x-large;
+    color: white;
+}
+
+.navbar .container{
+   
+    background-color: var(--primary-color);
+    align-items: center;
+   /* font-family: 'Sacramento', cursive; */
+   font-family: 'Lobster Two', cursive;
+  
+    
+}
+
+.navbar a:hover{
+    border-bottom: 2px white solid;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+.item{
+  
+    margin: 10px;
+    padding: 7px;
+
+}
+
+/*showcase*/
+.showcase{
+    background-color: var(--primary-color);
+    height: 400px;
+    position: relative;
+    
+}
+
+.showcase h1{
+    font-size: 40px;
+}
+
+.showcase a{
+    color: white;
+    text-decoration: none;
+}
+
+.showcase a:hover{
+    border-bottom: 2px white solid;
+}
+
+.showcase-text{
+    width: 350px;
+    margin-left: 80px;
+    animation: slideInFromLeft 1.5s ease-in;
+}
+
+.showcase-form h2{
+    margin-bottom: 10px;
+
+}
+
+.showcase .grid{
+    grid-template-columns: 55% auto;
+}
+
+.showcase-form{
+    height: 350px;
+    position: relative;
+    top: 60px;
+    width: 350px;
+    padding: 40px;
+    justify-self: flex-end;
+    z-index: 100;
+    margin-left: 70px;
+    animation: slideInFromRight 1.5s ease-in;
+}
+
+.showcase-form .form-control{
+    padding: 20px 0;
+}
+.showcase-form input[type='text'],
+.showcase-form input[type='email']{    border: 0px;
+    border-bottom: 1px solid black;
+    width: 100%;
+    padding: 3px;
+}
+
+.showcase-form input:focus{
+    outline: none;
+}
+
+.showcase::after,
+.showcase::before{
+    content: '';
+    height: 100px;
+    position: absolute;
+    bottom: -70px;
+    right: 0px;
+    left: 0px;
+    background-color: black;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+
+/*Stats*/
+.stats{
+    padding-top: 100px;
+    animation: slideInFromBottom 1.5s ease-in;
+}
+
+.stats-heading{
+    width: 500px;
+    margin: auto;
+}
+
+.stats .grid h3{
+    font-size: 35px;
+}
+
+.stats .grid p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* cli*/
+.cli .grid{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+
+.cli .grid img{
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+    width: 73%;
+    margin-left: 62px;
+}
+
+ 
+/*Cloud*/
+.cloud .grid{
+    grid-template-columns: 4fr 3fr;
+}
+
+.cloud .container .text-center a{
+    text-decoration: none;
+}
+
+/*languages*/
+.languages .card{
+text-align: center;
+margin: 18px 10px 40px;
+transition: transform 0.2s ease-in;
+}
+
+.languages .flex{
+    flex-wrap: wrap;
+}
+
+.languages .card h4{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.languages .card:hover{
+    transform: translateY(-15px);
+}
+/*docs*/
+.docs-head .dea{
+    margin-left: 80px;
+}
+
+
+.docs-main li a{
+    text-decoration: none;
+    font-size: large;
+    color: black;
+    font-weight: lighter;
+    
+}
+
+.docs-main .container .card {
+    padding: 35px;
+    width: 500px;
+    margin-left: 90px;
+}
+
+.docs-main h3{
+    margin: 20px 0;
+}
+
+.docs-main .grid{
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+.docs-main li{
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.docs-main a:hover{
+    font-weight: bold;
+}
+
+.alert-success{
+    background-color: #C3C3E5;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.card pre{
+    background-color: black;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/*fetures*/
+.features-head img, .docs-head img{
+    width: 250px;
+    justify-self: flex-end;
+    margin-right: 58px;
+}
+
+.features-sub-head .grid img{
+    width: 300px;
+    justify-self: flex-end;
+    margin-right: 58px;
+}
+
+.features-head .fea,.sub{
+     margin-left: 80px;
+}
+
+.feature-main .card i {
+    margin-right: 20px;
+}
+
+.feature-main .grid{
+    padding: 10px;
+}
+
+.feature-main .grid> *:first-child{
+    grid-column: 1 / span 3;
+}
+
+.feature-main .grid> *:nth-child(2){
+    grid-column: 1 / span 2;
+}
+
+
+
+/*footer*/
+.social a{
+    color: white;
+    margin: 0 10px;
+}
+.footer{
+    background-color:var(--primary-color);
+    
+}
+
+.footer .container{
+
+    padding-left: 100px;
+}
+
+/*Animations*/
+@keyframes slideInFromLeft{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+
+/*Tablets and under*/
+
+@media(max-width:768px){
+ .grid,
+ .showcase .grid,
+ .cloud .grid,
+ .cli .grid,
+ .stats .grid,
+ .feature-main .grid,
+ .docs-main .grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+ }
+
+ .features-head,
+ .features-sub-head,
+ .docs-head{
+    text-align: center;
+ }
+
+ .features-head img,
+ .features-sub-head img,
+ .docs-head img{
+    justify-self: center;
+ }
+
+ .feature-main .grid> *:first-child,
+ .feature-main .grid> *:nth-child(2){
+    grid-column: 1;
+ }
+
+ .showcase{
+    height: auto;
+ }
+
+ .showcase-text {
+    text-align: center;
+    margin-top: 40px;
+    animation: slideInFromTop 1.5s ease-in;
+ }
+
+ .showcase-form{
+    justify-self: center;
+    margin: auto;
+    animation: slideInFromBottom 1.5s ease-in;
+ }
+
+ .cli .grid img{
+    grid-row: 1 ;
+    grid-column: 1 ;
+    width: 73%;
+    margin-left: 62px;
+}
+}
+
+/*Mobiles and under*/
+
+@media(max-width:500px){
+     .navbar{
+        height: 150px;
+     }
+     .navbar .flex{
+        flex-direction: column;
+     }
+     .navbar ul{
+        background-color: rgba(0, 0, 0, 0.1);
+        margin-left: 45px;
+     }
+
+     .navbar .logo{
+        padding-right: 82px;
+     }
+
+     .docs-main .container .grid .card{
+        overflow: visible;
+     }
+
+    
+}
